@@ -1,0 +1,175 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xceed Knowledge Hub | Home</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-book-open me-2"></i>Xceed HelpDesk Hub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="tickets.html"><i class="fas fa-ticket-alt me-1"></i>Tickets Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="links.html"><i class="fas fa-link me-1"></i>Useful Links</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="it-general.html"><i class="fas fa-laptop me-1"></i>IT General</a>
+                    </li>
+                </ul>
+                
+                <!-- Search Bar -->
+                <form class="d-flex ms-auto" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search for anything..." aria-label="Search" id="searchInput" />
+                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                
+                <!-- Dark Mode Button -->
+                <button class="btn btn-light ms-2" id="darkModeToggle" title="Toggle Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Welcome Message -->
+        <div class="alert alert-success d-flex align-items-center mb-5" role="alert">
+            <i class="fas fa-info-circle fa-2x me-3"></i>
+            <div>
+                <strong>Welcome to Xceed Knowledge Hub!</strong><br>
+                Your complete guide for HelpDesk operations. Navigate through the sections to find what you need.
+            </div>
+        </div>
+
+        <!-- Quick Access Cards -->
+        <div class="row g-4 justify-content-center">
+            <div class="col-md-6 col-lg-4">
+                <a href="tickets.html" class="text-decoration-none">
+                    <div class="card h-100 quick-card ticket-card">
+                        <div class="card-header bg-teal text-white fw-bold">
+                            <i class="fas fa-ticket-alt me-2"></i>Tickets Guide
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Learn the required data for opening different types of tickets - Access, Avaya, Network, and Cisco issues.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-teal">4 Topics</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <a href="links.html" class="text-decoration-none">
+                    <div class="card h-100 quick-card">
+                        <div class="card-header bg-indigo text-white fw-bold">
+                            <i class="fas fa-link me-2"></i>Useful Links
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Quick access to Service Desk Portal, Cisco Finesse, SharePoint, Vendor Support, and more.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-indigo">6 Categories</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+
+            <div class="col-md-6 col-lg-4">
+                <a href="it-general.html" class="text-decoration-none">
+                    <div class="card h-100 quick-card">
+                        <div class="card-header bg-coral text-white fw-bold">
+                            <i class="fas fa-laptop me-2"></i>IT General
+                        </div>
+                        <div class="card-body">
+                            <p class="text-muted">Solutions for daily IT problems - Windows setup, performance issues, hardware troubleshooting.</p>
+                            <div class="mt-3">
+                                <span class="badge bg-coral">4 Guides</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <h3 class="border-bottom pb-2 mb-4">
+                    <i class="fas fa-chart-bar text-teal me-2"></i>Quick Stats
+                </h3>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-ticket-alt fa-3x text-teal mb-3"></i>
+                        <h4>4</h4>
+                        <p class="text-muted mb-0">Ticket Types</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-link fa-3x text-indigo mb-3"></i>
+                        <h4>15+</h4>
+                        <p class="text-muted mb-0">Useful Links</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card text-center">
+                    <div class="card-body">
+                        <i class="fas fa-book fa-3x text-coral mb-3"></i>
+                        <h4>4</h4>
+                        <p class="text-muted mb-0">IT Guides</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">© 2025 Mekkawy - Xceed HelpDesk Hub | Version 3.0</p>
+            <p class="mb-0 small text-muted">All links updated and ready for daily use</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+

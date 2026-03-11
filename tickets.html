@@ -1,0 +1,211 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Xceed Knowledge Hub | Tickets Guide</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+    
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+    <!-- Top Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary sticky-top">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold" href="index.html">
+                <i class="fas fa-book-open me-2"></i>Xceed HelpDesk Hub
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html"><i class="fas fa-home me-1"></i>Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="tickets.html"><i class="fas fa-ticket-alt me-1"></i>Tickets Guide</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="links.html"><i class="fas fa-link me-1"></i>Useful Links</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="it-general.html"><i class="fas fa-laptop me-1"></i>IT General</a>
+                    </li>
+                </ul>
+                
+                <!-- Search Bar -->
+                <form class="d-flex ms-auto" role="search" id="searchForm">
+                    <input class="form-control me-2" type="search" placeholder="Search for anything..." aria-label="Search" id="searchInput" />
+                    <button class="btn btn-outline-light" type="submit"><i class="fas fa-search"></i></button>
+                </form>
+                
+                <!-- Dark Mode Button -->
+                <button class="btn btn-light ms-2" id="darkModeToggle" title="Toggle Mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="container my-5">
+        <!-- Page Header -->
+        <div class="row mt-4">
+            <div class="col-12">
+                <h2 class="border-bottom pb-2 mb-4">
+                    <i class="fas fa-ticket-alt text-teal me-2"></i>
+                    Tickets Guide
+                    <small class="text-muted fs-6">Data required before opening a ticket</small>
+                </h2>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <!-- 1. Access Request for Application or VPN -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-teal ticket-card">
+                    <div class="card-header bg-teal text-white fw-bold">
+                        <i class="fas fa-key me-2"></i> Access Request (App / VPN)
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted small">Any request for access to a new application or VPN privilege.</p>
+                        <hr>
+                        <h6 class="fw-bold"><i class="fas fa-clipboard-list me-2"></i>Required Data:</h6>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-user-circle text-teal me-2"></i>Line Manager Username</li>
+                            <li><i class="fas fa-mobile-alt text-teal me-2"></i>User Mobile Number</li>
+                            <li><i class="fas fa-link text-teal me-2"></i>Application Link (URL)</li>
+                            <li><i class="fas fa-bullseye text-teal me-2"></i>Business Need</li>
+                            <li><i class="fas fa-file-alt text-teal me-2"></i>Attach Screening Error (if available)</li>
+                        </ul>
+                        <div class="bg-light p-2 rounded mt-2" id="accessTemplate">
+                            <p class="mb-1 fw-bold small">📋 Ready Template:</p>
+                            <p class="small mb-0">"Access Request for [Application Name] - User: [Name] - Business Need: [Reason] - Link: [URL]"</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-teal mt-2 copy-btn" data-template="accessTemplate">
+                            <i class="far fa-copy me-1"></i>Copy Template
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 2. Avaya / Communication Issue -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-coral ticket-card">
+                    <div class="card-header bg-coral text-white fw-bold">
+                        <i class="fas fa-phone-alt me-2"></i> Avaya / Communication Issue
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted small">Voice system issues, call problems.</p>
+                        <hr>
+                        <h6 class="fw-bold"><i class="fas fa-clipboard-list me-2"></i>Required Data:</h6>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-user-circle text-coral me-2"></i>Line Manager Username</li>
+                            <li><i class="fas fa-mobile-alt text-coral me-2"></i>User Mobile Number</li>
+                            <li><i class="fas fa-phone-square text-coral me-2"></i>Extension Number or Avaya ID</li>
+                            <li><i class="fas fa-clipboard-check text-coral me-2"></i>Attached Escalation Form</li>
+                            <li><i class="fas fa-microphone-alt text-coral me-2"></i>Detailed Problem Description</li>
+                        </ul>
+                        <div class="bg-light p-2 rounded mt-2" id="avayaTemplate">
+                            <p class="mb-1 fw-bold small">📋 Ready Template:</p>
+                            <p class="small mb-0">"Avaya Issue for User [Name] - Extension [Number] - Problem: [Detailed Description]"</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-coral mt-2 copy-btn" data-template="avayaTemplate">
+                            <i class="far fa-copy me-1"></i>Copy Template
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 3. Port / Network Issue -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-indigo ticket-card">
+                    <div class="card-header bg-indigo text-white fw-bold">
+                        <i class="fas fa-network-wired me-2"></i> Port / Network Issue
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted small">Internet not working, port is down, cable issue.</p>
+                        <hr>
+                        <h6 class="fw-bold"><i class="fas fa-clipboard-list me-2"></i>Required Data:</h6>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-user-circle text-indigo me-2"></i>Line Manager Username</li>
+                            <li><i class="fas fa-mobile-alt text-indigo me-2"></i>User Mobile Number</li>
+                            <li><i class="fas fa-plug text-indigo me-2"></i>Port Number</li>
+                            <li><i class="fas fa-map-pin text-indigo me-2"></i>Seat Number</li>
+                            <li><i class="fas fa-desktop text-indigo me-2"></i>Device MAC Address</li>
+                        </ul>
+                        <div class="bg-light p-2 rounded mt-2" id="portTemplate">
+                            <p class="mb-1 fw-bold small">📋 Ready Template:</p>
+                            <p class="small mb-0">"Network Issue for User [Name] - Seat [Number] - Port [Number] - MAC: [Address]"</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-indigo mt-2 copy-btn" data-template="portTemplate">
+                            <i class="far fa-copy me-1"></i>Copy Template
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 4. Cisco Issue -->
+            <div class="col-md-6 col-lg-4">
+                <div class="card h-100 border-red ticket-card">
+                    <div class="card-header bg-red text-white fw-bold">
+                        <i class="fas fa-phone-volume me-2"></i> Cisco Issue
+                    </div>
+                    <div class="card-body">
+                        <p class="text-muted small">Cisco headset issues and communications.</p>
+                        <hr>
+                        <h6 class="fw-bold"><i class="fas fa-clipboard-list me-2"></i>Required Data:</h6>
+                        <ul class="list-unstyled small">
+                            <li><i class="fas fa-user-circle text-red me-2"></i>Line Manager Username</li>
+                            <li><i class="fas fa-mobile-alt text-red me-2"></i>User Mobile Number</li>
+                            <li><i class="fas fa-phone me-2 text-red"></i>Headset Model</li>
+                            <li><i class="fas fa-exclamation-triangle text-red me-2"></i>Exact Problem Description</li>
+                            <li><i class="fas fa-search text-red me-2"></i>Steps Already Taken</li>
+                        </ul>
+                        <div class="bg-light p-2 rounded mt-2" id="ciscoTemplate">
+                            <p class="mb-1 fw-bold small">📋 Ready Template:</p>
+                            <p class="small mb-0">"Cisco Issue for User [Name] - Model [Number] - [Problem Description]"</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-red mt-2 copy-btn" data-template="ciscoTemplate">
+                            <i class="far fa-copy me-1"></i>Copy Template
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Back to Home -->
+        <div class="text-center mt-4">
+            <a href="index.html" class="btn btn-outline-teal">
+                <i class="fas fa-arrow-left me-2"></i>Back to Home
+            </a>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-4 mt-5">
+        <div class="container">
+            <p class="mb-1">© 2025 Mekkawy - Xceed HelpDesk Hub</p>
+            <p class="mb-0 small text-muted">All links updated and ready for daily use</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom Script -->
+    <script src="js/script.js"></script>
+</body>
+</html>
+
+
